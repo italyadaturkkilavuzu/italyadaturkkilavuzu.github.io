@@ -73,3 +73,112 @@ aside nav ul {
         padding: 0.75em 0; /* Increased from default 0.5em for more space */
     }
 }
+
+/* Mobile-friendly dropdown improvements */
+/* Try multiple selectors to catch different Hugo Book theme versions */
+aside nav ul li label,
+.book-menu ul li label,
+nav ul li label,
+.book-section-flat label {
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding: 12px 8px !important;
+    min-height: 44px;
+    user-select: none;
+    transition: background-color 0.2s ease;
+    border-radius: 4px;
+    margin: 2px 0;
+    position: relative;
+}
+
+/* Make the entire row clickable with hover effect */
+aside nav ul li label:hover,
+.book-menu ul li label:hover,
+nav ul li label:hover,
+.book-section-flat label:hover {
+    background-color: rgba(0, 0, 0, 0.05) !important;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    aside nav ul li label:hover,
+    .book-menu ul li label:hover,
+    nav ul li label:hover,
+    .book-section-flat label:hover {
+        background-color: rgba(255, 255, 255, 0.1) !important;
+    }
+}
+
+/* Target the arrow more aggressively - try different pseudo-elements */
+aside nav ul li label::after,
+.book-menu ul li label::after,
+nav ul li label::after,
+.book-section-flat label::after,
+aside nav ul li label::before,
+.book-menu ul li label::before,
+nav ul li label::before,
+.book-section-flat label::before {
+    content: '▶' !important;
+    font-size: 12px !important;
+    line-height: 1 !important;
+    padding: 8px !important;
+    color: #666 !important;
+    transition: transform 0.2s ease !important;
+    flex-shrink: 0;
+    display: inline-block !important;
+    width: auto !important;
+    height: auto !important;
+    border: none !important;
+    background: none !important;
+    position: absolute !important;
+    right: 8px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+}
+
+/* Rotate arrow when dropdown is open */
+aside nav ul li input[type="checkbox"]:checked + label::after,
+.book-menu ul li input[type="checkbox"]:checked + label::after,
+nav ul li input[type="checkbox"]:checked + label::after,
+.book-section-flat input[type="checkbox"]:checked + label::after,
+aside nav ul li input[type="checkbox"]:checked + label::before,
+.book-menu ul li input[type="checkbox"]:checked + label::before,
+nav ul li input[type="checkbox"]:checked + label::before,
+.book-section-flat input[type="checkbox"]:checked + label::before {
+    transform: translateY(-50%) rotate(90deg) !important;
+}
+
+/* Mobile-specific improvements */
+@media (max-width: 768px) {
+    aside nav ul li label,
+    .book-menu ul li label,
+    nav ul li label,
+    .book-section-flat label {
+        padding: 16px 12px !important;
+        min-height: 48px !important;
+        font-size: 16px !important;
+    }
+    
+    aside nav ul li label::after,
+    .book-menu ul li label::after,
+    nav ul li label::after,
+    .book-section-flat label::after,
+    aside nav ul li label::before,
+    .book-menu ul li label::before,
+    nav ul li label::before,
+    .book-section-flat label::before {
+        font-size: 20px !important;
+        padding: 12px !important;
+    }
+    
+    /* Active state for mobile taps */
+    aside nav ul li label:active,
+    .book-menu ul li label:active,
+    nav ul li label:active,
+    .book-section-flat label:active {
+        background-color: rgba(0, 122, 204, 0.15) !important;
+        transform: scale(0.98);
+    }
+}
