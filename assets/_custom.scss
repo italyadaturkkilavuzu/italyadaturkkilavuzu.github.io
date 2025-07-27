@@ -1,0 +1,75 @@
+/* Custom font override */
+
+/* Choose ONE of the following fonts by uncommenting the @import line: */
+
+/* Option 1: Inter (Modern, clean) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/* Option 2: Poppins (Friendly, rounded) */
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); */
+
+/* Option 3: Open Sans (Classic web font) */
+/* @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap'); */
+
+/* Option 4: Nunito (Rounded and friendly) */
+/* @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap'); */
+
+/* Option 5: Lato (Elegant and readable) */
+/* @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap'); */
+
+/* Override all font families - Change 'Inter' to match your chosen font */
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+div,
+span,
+a,
+li,
+ul,
+ol,
+.markdown,
+.book-nav,
+.book-brand,
+.book-menu,
+.book-toc,
+.book-header,
+.book-search,
+.book-page {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
+}
+
+/* Keep monospace font for code blocks */
+code,
+pre,
+.book-hint code,
+.markdown code {
+    font-family: 'JetBrains Mono', 'Fira Code', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace !important;
+}
+
+/* Logo styling */
+.book-brand img.book-icon {
+    height: 32px;
+    width: auto;
+    margin-right: 8px;
+    border-radius: 4px;
+}
+
+/* Optional: Adjust logo size for different screen sizes */
+@media (max-width: 768px) {
+    .book-brand img.book-icon {
+        height: 28px;
+    }
+}
+
+/* Increase spacing between navigation titles */
+aside nav ul {
+    a, span {
+        padding: 0.75em 0; /* Increased from default 0.5em for more space */
+    }
+}

@@ -1,0 +1,32 @@
+baseURL = 'https://italyadaturkkilavuzu.github.io/'
+languageCode = 'tr'
+title = 'İtalya Türk Öğrenci Rehberi'
+theme = 'hugo-book'
+
+# Book configuration
+disablePathToLower = true
+enableGitInfo = true
+
+# Needed for mermaid/katex shortcodes
+[markup]
+[markup.goldmark.renderer]
+  unsafe = true
+
+[markup.tableOfContents]
+  startLevel = 1
+
+[params]
+  # Sets color theme: light, dark or auto.
+  BookTheme = 'light'
+  
+  # Add your logo here
+  BookLogo = '/logo.png'
+  
+  # Controls table of contents visibility on right side of pages.
+  BookToC = true
+  
+  # Enable search
+  BookSearch = true
+  
+  # Set the height of the sidebar menu
+  BookMenuBundle = true
