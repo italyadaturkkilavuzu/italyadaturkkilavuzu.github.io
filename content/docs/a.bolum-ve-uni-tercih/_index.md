@@ -32,8 +32,7 @@ Roma Sapienza Üniversitesi’nin Arkeoloji bölümü dünya sıralamalarında b
 
 Kendi ilgi alanınız için en iyi üniversiteyi doğru araştırma ile bulabilirsiniz. Şuanki öğrencilerle iletişime geçin, çevrenizdeki insanlarla konuşun, mümkünse bir kariyer rehberine danışın.
 
-# Üniversite Sistemi
-
+---
 ## Eğitim Süresi
 
 İtalya'da üniversite eğitim süreleri şu şekildedir:
