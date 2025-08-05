@@ -1,9 +1,10 @@
 ---
-title: "İtalya'da Üniversite Sistemi"
+title: "📋 Bölüm ve Üniversite Tercihi"
 weight: 10
+bookCollapseSection: false
 ---
 
-# Üniversite Eğitimi
+# 📋 Bölüm ve Üniversite Tercihi
 
 ## İtalya'da Eğitim Kalitesi
 
